@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dev
+  name: wil42-playground
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: dev
+      app: wil42-playground
   template:
     metadata:
       labels:
-        app: dev
+        app: wil42-playground
     spec:
       containers:
       - image: wil42/playground:v1
-        name: dev
+        name: wil42-playground
         ports:
         - containerPort: 8888
 ---
